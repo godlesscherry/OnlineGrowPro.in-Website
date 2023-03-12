@@ -2,7 +2,7 @@
   "name": "online-grow-pro-website",
   "private": true,
   "version": "0.1.0",
-  "homepage": "http://godlesscherry.github.io/OnlineGrowPro.in-Website/",
+  "homepage": "https://godlesscherry.github.io/OnlineGrowPro.in-Website/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
