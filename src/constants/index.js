@@ -43,6 +43,46 @@ export const features = [
   },
 ];
 
+export const pricingOptions = [
+  {
+    id: "pricing-1",
+    icon: star,
+    title: "Starter",
+    price: "$9.99/month",
+    services: [
+      "Website design",
+      "Social Media Management",
+      "User Reviews Management",
+      "Online Store Development",
+    ],
+  },
+  {
+    id: "pricing-2",
+    icon: star,
+    title: "Premium",
+    price: "$149.99/month",
+    services: [
+      "All starter services",
+      "Online Advertising",
+      "Marketing Campaigns",
+      "Tax filing & Accounting",
+    ],
+  },
+  {
+    id: "pricing-3",
+    icon: star,
+    title: "Enterprise",
+    price: "$299.99/month",
+    services: [
+      "All Premium services",
+      "Data analytics",
+      "Dedicated Support",
+      "Customized Solutions",
+    ],
+  },
+];
+
+
 export const feedback = [
   {
     id: "feedback-1",
