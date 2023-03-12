@@ -2,11 +2,11 @@
   "name": "online-grow-pro-website",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://godlesscherry.github.io/OnlineGrowPro.in-Website/",
+  "homepage": "http://godlesscherry.github.io/OnlineGrowPro.in-Website/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
