@@ -37,7 +37,7 @@ const Business = () =>(
           competitors outshine you online.
         </h2>
         <p className={`${styles.paragraph}
-        max-w-[470px] mt-5 mb-20`}>
+        max-w-[470px] mt-5 mb-10`}>
           In today's digital age, having a strong
           online presence is crucial for 
           small businesses to succeed. 
