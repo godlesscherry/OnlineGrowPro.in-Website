@@ -48,7 +48,7 @@ export const pricingOptions = [
     id: "pricing-1",
     icon: star,
     title: "Starter",
-    price: "$9.99/month",
+    price: "$99.99/month",
     services: [
       "Website design",
       "Social Media Management",

@@ -24,7 +24,8 @@ const Pricing = () => (
     </div>
 
     <div
-      className={`${layout.sectionReverse} flex-col w-[80%] mt-5 mb-10 rounded-[20px] p-60`}
+      className={`${layout.sectionReverse} mt-5 mb-10 rounded-[20px] flex-1 flex flex-col 
+      justify-center items-center bg-dimBlack ml-20 p-10`}
     >
       {pricingOptions.map((pricingOptions, index) => (
         <PricingCard
@@ -39,26 +40,20 @@ const Pricing = () => (
 
 const PricingCard = ({ title, price, services, index }) => (
   <div
-    className={`flex flex-row p-6 rounded-[20px]
-      ${index != pricingOptions.length - 1 ? "mb-6" : "mb-0"}
-      feature-card`}
+    className={`flex flex-row flex-col flex-1 p-6 rounded-[20px] feature-card`}
   >
-    <div className="flex-1 flex flex-col ml-10">
+    <div className="flex-1 flex flex-col ml-10 ">
       <h3
         className="font-poppins font-semibold text-white text-[28px]
           leading-[23px] mb-1"
       >
         {title}
       </h3>
-      <div
-        className={`flex flex-row p-6 rounded-[20px] ${
-          index != services.length - 1 ? "mb-6" : "mb-0"
-        }`}
-      >
+      <div className={`flex flex-row rounded-[20px]`}>
         <ul className={`${layout.sectionInfo} w-[250px]`}>
           {services.map((service) => (
             <li
-              className={`${styles.paragraph} ${styles.flexCenter} mt-5 mb-5 object-contain`}
+              className={`${styles.paragraph} ${styles.flexCenter} mt-5 mb-5  justify-center items-center`}
               key={service}
             >
               {service}
