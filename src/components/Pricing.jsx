@@ -16,7 +16,7 @@ const Pricing = () => (
       </h2>
       <p
         className={`${styles.paragraph}
-        max-w-[400px] mt-5 mb-10`}
+        max-w-[800px] mt-5 mb-10`}
       >
         Our plans are designed to fit the needs of individuals, small
         businesses, and large organizations.
@@ -24,8 +24,8 @@ const Pricing = () => (
     </div>
 
     <div
-      className={`${layout.sectionReverse} mt-5 mb-10 rounded-[20px] flex-1 flex flex-col 
-      justify-center items-center bg-dimBlack ml-20 p-10`}
+      className={`${layout.sectionReverse} mt-5 mb-10 rounded-[20px] flex-1 flex flex-row flex-col-reverse sm:flex-row
+      justify-center items-center bg-dimBlack ml-20 mr-20`}
     >
       {pricingOptions.map((pricingOptions, index) => (
         <PricingCard

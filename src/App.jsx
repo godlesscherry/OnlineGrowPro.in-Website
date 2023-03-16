@@ -9,9 +9,8 @@ import {
   CardDeal,
   CTA,
   Footer,
+  Pricing,
 } from "./components";
-import { HashRouter, Route, Link, Routes } from "react-router-dom";
-import Pricing from "./components/Pricing";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
