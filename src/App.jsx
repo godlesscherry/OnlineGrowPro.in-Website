@@ -8,7 +8,7 @@ import {
   Billing,
   CardDeal,
   CTA,
-  Footer,
+  Contact,
   Pricing,
 } from "./components";
 
@@ -35,7 +35,7 @@ const App = () => (
           {/*<CardDeal />*/}
           <Pricing />
           <CTA />
-          <Footer />
+          <Contact />
         </div>
       </div>
     </div>

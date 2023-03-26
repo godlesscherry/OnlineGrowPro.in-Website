@@ -5,7 +5,7 @@ import Business from "./Business";
 import Clients from "./Clients";
 import CTA from "./CTA";
 import Stats from "./Stats";
-import Footer from "./Footer";
+import Contact from "./Contact";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import Pricing from "./Pricing";
@@ -18,7 +18,7 @@ export {
   Clients,
   CTA,
   Stats,
-  Footer,
+  Contact,
   Testimonials,
   Hero,
   Pricing,
