@@ -1,23 +1,27 @@
 import React from "react";
+import { InlineWidget } from "react-calendly";
 
 const Button = ({ styles }) => {
   const openCalendlyPopup = () => {
-    const iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = "about:blank";
-    document.body.appendChild(iframe);
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    document.body.appendChild(script);
 
-    const iframeDocument = iframe.contentWindow.document;
-    const calendlyScript = iframeDocument.createElement("script");
-    calendlyScript.setAttribute(
-      "src",
-      "https://assets.calendly.com/assets/external/widget.js"
-    );
-    iframeDocument.head.appendChild(calendlyScript);
-
-    calendlyScript.onload = () => {
-      window.Calendly.showPopupWidget("https://calendly.com/ogpro/30min");
-      document.body.removeChild(iframe);
+    script.onload = () => {
+      document.cookie =
+        "calendly_sso_session=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/ogpro/30min",
+        prefill: {},
+        pageSettings: {
+          hideEventTypeDetails: true,
+          hideLandingPageDetails: false,
+          primaryColor: "#00a2ff",
+          textColor: "#ffffff",
+          backgroundColor: "#1f1f1f",
+        },
+        utm: {},
+      });
     };
   };
 

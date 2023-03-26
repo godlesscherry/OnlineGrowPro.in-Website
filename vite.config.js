@@ -7,5 +7,17 @@ export default defineConfig({
   base: '/OnlineGrowPro.in-Website/',
   build: {
     outDir: './build',
+    assetsDir: 'assets',
+    chunkSizeWarningLimit: 2000,
+    sourcemap: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
   },
-})
+  rollupOptions: {
+    preserveEntrySignatures: 'allow-extension'
+  }
+}
+});
