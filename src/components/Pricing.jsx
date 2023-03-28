@@ -67,8 +67,8 @@ const PricingCard = ({ title, price, services, index }) => (
       >
         {price}
       </p>
-      <Subscribe />
     </div>
+    <Subscribe />
   </div>
 );
 
