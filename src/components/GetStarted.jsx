@@ -1,26 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import styles from "../style";
 import { arrowUp } from "../assets";
 
 const GetStarted = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
   const openCalendlyPopup = () => {
-    setShowPopup(true);
-
     const calendlyScript = document.createElement("script");
     calendlyScript.setAttribute(
       "src",
       "https://assets.calendly.com/assets/external/widget.js"
     );
     document.body.appendChild(calendlyScript);
-
-    setTimeout(() => {
-      if (!window.Calendly) {
-        setShowPopup(false);
-        document.body.style.overflow = "auto";
-      }
-    }, 5000);
 
     calendlyScript.onload = () => {
       if (window.Calendly) {
@@ -31,6 +20,26 @@ const GetStarted = () => {
       }
     };
   };
+
+  useEffect(() => {
+    const handleCalendlyEventScheduled = () => {
+      if (window.Calendly) {
+        window.Calendly.closePopupWidget();
+      }
+    };
+
+    window.addEventListener(
+      "calendly.eventScheduled",
+      handleCalendlyEventScheduled
+    );
+
+    return () => {
+      window.removeEventListener(
+        "calendly.eventScheduled",
+        handleCalendlyEventScheduled
+      );
+    };
+  }, []);
 
   return (
     <div
@@ -54,18 +63,6 @@ const GetStarted = () => {
           <span className="text-gradient">Started</span>
         </p>
       </div>
-      {showPopup && (
-        <div
-          className="w-full h-full fixed top-0 left-0 bg-black bg-opacity-50 z-50"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <p>Loading...</p>
-        </div>
-      )}
     </div>
   );
 };
